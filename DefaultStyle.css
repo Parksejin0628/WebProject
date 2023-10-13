@@ -1,0 +1,66 @@
+html, body 
+{ 
+	margin: 0; padding: 0; height: 100%; 
+}
+header 
+{ 
+	width: 100%; height: 31%;
+	background : #101010;
+}
+nav 
+{ 
+	width: 10%; height: 200%; float: left;
+	background : #000000;
+	color : gray;
+}
+section 
+{ 
+	width: 90%; height: 200%; float: left;
+}
+footer 
+{ 
+	width: 100%; height: 15%; clear: both;
+}
+
+
+
+h1 { color : #DDDD00; }
+/* tbody의 색깔을 변경해야 표가 구분이 된다. */
+
+
+body
+{ 
+	background : #202020; 
+	color : #04B08C; 
+}
+
+/*main*/
+main tbody	
+{
+	background : #404040;
+	border-color : yellow;
+	color : white;
+}
+/*main td:hover { color : yellow; }*/
+
+#Image_mainPage
+{
+	/*나의 해상도 기준으로 딱 들어오는 크기*/
+	width : 100%;
+	height : 150px;
+}
+
+
+.emphasisYello 
+{
+	*:hover { color : yellow; }
+}
+
+.area_mainSheet
+{
+	width : 20%;
+	height : 20%;
+}
+
+
+/* #EFB8E4 */

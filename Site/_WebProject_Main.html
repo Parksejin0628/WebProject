@@ -2,6 +2,37 @@
 <html>
 <head>
 	<title> 웹사이트 제목 </title>
+	<style>
+		@import url(../DefaultStyle.css);
+	</style>
+	<script>
+		function GameInformation(gameName, gameScore, gamePrice, gameIamageLink, pageLink)
+		{
+			this.name = gameName;
+			this.score = gameScore;
+			this.price = gamePrice;
+			this.ImageLink = gameImageLink;
+			this.pageLink = pageLink;
+
+			this.getName = function() { return this.name; }
+			this.getScore = function() { return this.score; }
+			this.getPrice = function() { return this.price; }
+			this.getImage = function() { return this.ImageLink; }
+			this.getPageLink = function() { return this.pageLink; }
+		}
+
+		function TitleImage(imageLink)
+		{
+			let this.imageLink = imageLink;
+			let index = 0;
+			let maxIndex = this.imageLink.length;
+
+			this.changeImage = function()
+			{
+				/*추후 구현*/
+			}
+		}
+	</script>
 </head>
 
 
@@ -37,70 +68,87 @@
 			</tr>
 		</tbody>
 	</table>	
+
 	<hr>
 </header>
+
+<nav>
+	<script>
+	let game_skul = new GameInformation("Skul: The Hero Slayer", 4, 13000, "../Media/Game 1.jfif", "Game/BasePage_game.html");
+	document.write(game_skul.name);
+	</script>
+</nav>
+
+<section>
+<main>
 	<table>
-		<tbody>
-			<tr>
-				<td>
+		<tbody >
+			<tr class = "emphasisYello">
+				<td class = "area_mainSheet">
+
 					<a href = "Game/BasePage_game.html">
-						<img src = "../Media/Game 1.jfif" width = "300" height = "175"> 
+						<img src = "../Media/Game 1.jfif" id = "Image_mainPage"> 
 					</a>
 					<h4>Skul: The Hero Slayer </h4> 
 					★★★★☆ <i> \13,000 </i> 
-					
 				</td>
 				
-				<td>
-					<img src = "../Media/Game 2.jfif" width = "300" height = "175"> 
+				<td class = "area_mainSheet">
+					<img src = "../Media/Game 2.jfif" id = "Image_mainPage"> 
 					<h4>산나비</h4> 
 					★★★★★ <i> \25,000 </i> 
 				</td>
-				<td>
-					<img src = "../Media/Game 3.jfif" width = "300" height = "175"> 
+				<td class = "area_mainSheet">
+					<img src = "../Media/Game 3.jfif" id = "Image_mainPage"> 
 					<h4>용사식당</h4> 
 					★★☆☆☆ <i> \7,500 </i> 
 				</td>
-				<td>
-					<img src = "../Media/Game 4.jfif" width = "300" height = "175"> 
+				<td class = "area_mainSheet">
+					<img src = "../Media/Game 4.jfif" id = "Image_mainPage"> 
 					<h4>Enter the Gungeon</h4> 
 					★★★★★ <i> \26,000 </i> 
 				</td>
-				<td>
-					<img src = "../Media/Game 5.jfif" width = "300" height = "175"> 
+				<td class = "area_mainSheet">
+					<img src = "../Media/Game 5.jfif" id = "Image_mainPage"> 
 					<h4>Don't Starve Together</h4> 
 					★★★★★★ <i> \45,000 </i> 
 				</td>
 			</tr>
-			<tr>
-				<td>
-					<img src = "../Media/Game 6.jfif" width = "300" height = "175"> 
+			<tr class = "emphasisYello">
+				<td class = "area_mainSheet">
+					<img src = "../Media/Game 6.jfif" id = "Image_mainPage"> 
 					<h4>Core Keeper</h4> 
 					★★★★☆ <i> \17,000 </i> 
 				</td>
-				<td>
-					<img src = "../Media/Game 7.jfif" width = "300" height = "175"> 
+				<td class = "area_mainSheet">
+					<img src = "../Media/Game 7.jfif" id = "Image_mainPage"> 
 					<h4>Celeste</h4> 
 					★★★★★ <i> \26,000 </i> 
 				</td>
-				<td>
-					<img src = "../Media/Game 8.jfif" width = "300" height = "175"> 
+				<td class = "area_mainSheet">
+					<img src = "../Media/Game 8.jfif" id = "Image_mainPage"> 
 					<h4>Stardew Valley</h4> 
 					★★★☆☆ <i> \9,000 </i> 
 				</td>
-				<td>
-					<img src = "../Media/Game 9.jfif" width = "300" height = "175"> 
+				<td class = "area_mainSheet">
+					<img src = "../Media/Game 9.jfif" id = "Image_mainPage"> 
 					<h4>Have a nice Death</h4> 
 					★★★★☆ <i> \16,000 </i> 
 				</td>
-				<td>
-					<img src = "../Media/Game 10.jfif" width = "300" height = "175"> 
+				<td class = "area_mainSheet">
+					<img src = "../Media/Game 10.jfif" id = "Image_mainPage"> 
 					<h4>The Binding of Isaac Repentance</h4> 
 					★★★★★ <i> \59,000 </i> 
 				</td>
 			</tr>
 		</tbody>
 	</table>
+</main>
+</section>
+
+<footer>
+	Footer Test
+</footer>
 </body>
 
 
