@@ -6,6 +6,34 @@
 		@import url(../DefaultStyle.css);
 	</style>
 	<script>
+		function ChangeColorTheme()
+		{
+			let tbody = document.getElementsByClassName("gameList");
+			let whiteOrBlack = document.getElementsByClassName("WhiteOrBlack");
+			let header = document.getElementById("header");
+			let body = document.getElementById("body");
+			let nav = document.getElementById("nav");
+			let footer = document.getElementById("footer");
+			for(let i = 0; i<tbody.length; i++)
+			{	
+				tbody[i].style.backgroundColor = "white";
+				tbody[i].style.color = "black";
+			}
+			body.style.backgroundColor = "#585858";
+			header.style.backgroundColor = "#F2F2F2";
+			nav.style.backgroundColor = "#BDBDBD";
+			footer.style.backgroundColor = "white";
+			for(let i = 0; i<whiteOrBlack.length; i++)
+			{
+				whiteOrBlack[i].style.color = "black";
+			}
+		}
+
+		function ClickTitle(obj)
+		{
+			obj.innerHTML = "인디게임 사주세요 제발염"
+		}
+		/*
 		function GameInformation(gameName, gameScore, gamePrice, gameIamageLink, pageLink)
 		{
 			this.name = gameName;
@@ -13,12 +41,6 @@
 			this.price = gamePrice;
 			this.ImageLink = gameImageLink;
 			this.pageLink = pageLink;
-
-			this.getName = function() { return this.name; }
-			this.getScore = function() { return this.score; }
-			this.getPrice = function() { return this.price; }
-			this.getImage = function() { return this.ImageLink; }
-			this.getPageLink = function() { return this.pageLink; }
 		}
 
 		function TitleImage(imageLink)
@@ -29,19 +51,21 @@
 
 			this.changeImage = function()
 			{
-				/*추후 구현*/
+				/*추후 구현
 			}
 		}
+		*/
+		
 	</script>
 </head>
 
 
-<body>
-<header>
+<body id = "body">
+<header id = "header">
 	<a href = "_WebProject_Main.html">
-		<img src = "../Media/Shop 1.png" width = "50" height = "50">
+		<img src = "../Media/Shop 1.png" width = "50" height = "50" >
 	</a>
-	<h1> 인디게임 사주세요 </h1>
+	<h1 class = "WhiteOrBlack" onclick = "ClickTitle(this)"> 인디게임 사주세요 </h1>
 	<hr>
 	<table>
 		<tbody>
@@ -72,17 +96,16 @@
 	<hr>
 </header>
 
-<nav>
+<nav id = "nav">
 	<script>
-	let game_skul = new GameInformation("Skul: The Hero Slayer", 4, 13000, "../Media/Game 1.jfif", "Game/BasePage_game.html");
-	document.write(game_skul.name);
+	
 	</script>
 </nav>
 
 <section>
 <main>
 	<table>
-		<tbody >
+		<tbody class = "gameList">
 			<tr class = "emphasisYello">
 				<td class = "area_mainSheet">
 
@@ -146,8 +169,8 @@
 </main>
 </section>
 
-<footer>
-	Footer Test
+<footer id = "footer">
+	<input type = "button" value = "밝은 창 모드" onclick = "ChangeColorTheme()">
 </footer>
 </body>
 
